@@ -12,9 +12,8 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-mongoose.connect(
-  "mongodb+srv://tester:tester1234@cluster0-owhya.mongodb.net/test?retryWrites=true&w=majority"
-);
+var uri = "mongodb+srv://tester:tester1234@cluster0-owhya.mongodb.net/test?retryWrites=true"
+mongoose.connect(uri, {useNewUrlParser: true});
 
 app.use(express.urlencoded({ extended: false }));
 app.set("view engine", "ejs");
