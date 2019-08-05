@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="ui top menu">
+      <div class="item">
+        <a href ="/" class=" ui teal huge header">BLOG</a>
+      </div>
+      <div class="right menu">
+        <a href="/login" class="item">Sign In</a>
+        <a href="/register" class="item">Register</a>
+      </div>
+    </div>
+    <div class="ui container">
+      <div class="ui three stackable cards">
+        <% results.forEach(function(result){ %>
+          <div class="ui teal raised card">
+              <div class="content">
+                  <div class="header"><%=result.title%></div>
+                  <div class="meta"><%=result.createdAt%></div>
+                  <div class="description">
+                    <p>
+                     <%=result.content%>
+                    </p>
+                  </div>
+              </div>
+                <div class="extra content">
+                  <div class="right floated author">
+                    <div class="ui author">by <strong><%=result.author.username%></strong></div>
+                  </div>
+                </div>
+          </div>     
+        <%})%>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

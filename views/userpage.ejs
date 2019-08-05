@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="ui top menu">
+      <div class="item">
+        <a href="/" class=" ui teal huge header">BLOG</a>
+      </div>
+      <div class="right menu">
+        <a class="item">
+          <form action="/logout" method="POST">
+            <button class="ui black basic button" type="submit">Logout</button>
+          </form>
+        </a>
+      </div>
+    </div>
+    <h2 class="ui block header">
+      Welcome, <%= name %>
+    </h2>
+    <div class="ui container">
+      <form class="ui form" action="/profile/posts" method="POST">
+        <div class="field">
+          <label>Title</label>
+          <textarea rows="2" name="title"></textarea>
+        </div>
+        <div class="field">
+          <label>Content</label>
+          <textarea name="content"></textarea>
+        </div>
+        <button class="ui black basic button" type="submit">Submit</button>
+      </form>
+      <br />
+    </div>
+  </body>
+</html>

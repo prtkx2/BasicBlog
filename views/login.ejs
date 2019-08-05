@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/journal/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-ciphE0NCAlD2/N6NUApXAN2dAs/vcSAOTzyE202jJx3oS8n4tAQezRgnlHqcJ59C"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <body>
+      <div class="ui red menu">
+        <div class="item">
+          <a href="/" class=" ui teal huge header">BLOG</a>
+        </div>
+        <div class="right menu">
+            <a href="/login" class="item">Sign In</a>
+            <a href="/register" class="item">Register</a>
+        </div>
+      </div>
+      <div class="ui container">
+        <form class="ui large form" action="/login" method="POST">
+          <div class="field">
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Username" />
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Password" />
+          </div>
+          <div class="field"></div>
+          <button class="ui black basic button" type="submit">Login</button>
+        </form>
+      </div>
+    </body>
+  </body>
+</html>
